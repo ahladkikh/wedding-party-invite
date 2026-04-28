@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'DuduCyrillic';
-  src: url('fonts/DuduCyrillic.ttf') format('truetype');
+  src: url('./fonts/DuduCyrillic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Vasek';
-  src: url('fonts/VasekItalic.ttf') format('truetype');
+  src: url('./fonts/VasekItalic.ttf') format('truetype');
 }
 
 * {
@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
 
-  font-family: "DuduCyrillic", sans-serif;
+  font-family: "DuduCyrillic", cursive;
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
@@ -23,17 +23,18 @@ body {
   display: grid;
   place-items: center;
   background-color: #C2255B;
+  color: #631b25;
+  scrollbar-gutter: stable;
 
   --max-container-width: 768px;
 }
 
 .main-wrapper {
   max-width: var(--max-container-width);
+  width: 100vw;
   background-color: #fdf9e2;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
 
   .heart {
     padding: 30px 0;
@@ -45,10 +46,10 @@ body {
   justify-content: center;
   width: 100%;
   overflow: hidden;
+  min-height: 156px;
 
   svg {
     min-width: calc(var(--max-container-width) + 4px);
-    min-height: 83px;
   }
 }
 
@@ -60,7 +61,6 @@ body {
 
   .small {
     font-size: 24px;
-    color: #631b25;
   }
 
   .big {
@@ -77,12 +77,127 @@ body {
   align-items: center;
   gap: 60px;
   padding: 0 10%;
+  
+  & > * {
+    font-family: "Vasek", cursive;
+    font-size: clamp(26px, 6vw, 40px);
+    line-height: .7;
+  }
 
   .alina {
-    max-width: 300px;
+    max-width: 260px;
   }
 
   .lyosha {
     white-space: nowrap;
+  }
+}
+
+.you-are-invited {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #C2255B;
+  padding: 4px 0;
+  position: relative;
+
+  &::before, &::after {
+    content: "";
+    height: 100%;
+    width: 50px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, #C2255B, transparent);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, #C2255B, transparent);
+  }
+
+  .chunks {
+    display: inline-flex;
+    animation: horizontal-infinite-scroll 3s linear infinite;
+
+    span {
+      font-family: "Vasek", cursive;
+      width: 150px;
+      text-align: center;
+      font-size: 32px;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.appointment {
+  padding: 50px clamp(20px, 15%, 100px);
+  font-size: clamp(16px, 5vw, 26px);
+
+  .text {
+    text-align: center;
+    line-height: .95;
+  }
+
+  .date {
+    text-align: center;
+    color: #C2255B;
+    font-size: 1.5em;
+    padding: 10px;
+  }
+
+  .calendar {
+    background-color: #FFFFFF;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 0 20px;
+    margin-top: 30px;
+
+    .month {
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+
+      & > * {
+        text-align: center;
+        padding: clamp(4px, 2vw, 10px);
+        font-size: clamp(12px, 3vw, 26px);
+      }
+
+      .weekday {
+        color: #C2255B;
+      }
+
+      .disabled {
+        color: #edb7c9;
+      }
+
+      .appointment-day {
+        position: relative;
+
+        svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+    }
+  }
+}
+
+@keyframes horizontal-infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-150px);
   }
 }
