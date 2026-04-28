@@ -188,7 +188,11 @@ body {
           position: absolute;
           top: 0;
           left: 0;
+          width: 150%;
+          height: 150%;
+          transform: translate(-17%, -15%);
         }
+      }
     }
   }
 }
