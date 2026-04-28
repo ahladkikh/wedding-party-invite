@@ -1,7 +1,88 @@
+@font-face {
+  font-family: 'DuduCyrillic';
+  src: url('fonts/DuduCyrillic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Vasek';
+  src: url('fonts/VasekItalic.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: "DuduCyrillic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: #C2255B;
+
+  --max-container-width: 768px;
+}
+
 .main-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  max-width: var(--max-container-width);
+  background-color: #fdf9e2;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+
+  .heart {
+    padding: 30px 0;
+  }
+}
+
+.heart {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+
+  svg {
+    min-width: calc(var(--max-container-width) + 4px);
+    min-height: 83px;
+  }
+}
+
+.page-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+
+  .small {
+    font-size: 24px;
+    color: #631b25;
+  }
+
+  .big {
+    font-family: "Caveat", cursive;
+    font-size: 50px;
+    line-height: 40px;
+    color: #c2255b;
+  }
+}
+
+.human-dialog {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 0 10%;
+
+  .alina {
+    max-width: 300px;
+  }
+
+  .lyosha {
+    white-space: nowrap;
+  }
 }
