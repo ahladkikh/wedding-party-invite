@@ -13,21 +13,26 @@
   </head>
   <body>
     <div class="main-wrapper">
+      <!-- сердце с ленточкой -->
       <div class="heart">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -30 768 95" fill="none">
-          <path d="M0 12C94 -34.8 276.4 -31.6 364.4 10.8C477.6 65.6 668.8 35.6 768 -20" stroke="#C2255B" stroke-width="3"></path>
+          <path d="M 0 12 C 94 -34 276 -31 364 10 C 477 65 668 35 768 -20" stroke="#C2255B" stroke-width="3"></path>
           <path d="M356 -10C375.75 -18.79 385.14 2.52 387.36 14.27C393.07 2.58 407.76 -18.05 420.89 -6.99C434 4.06 404.52 43.3 383.94 57.86C371.86 47.06 331.31 0.99 356 -10Z" fill="#C2255B"></path>
         </svg>
       </div>
+      <!-- заголовок -->
       <div class="page-title">
         <div class="small">наконец-то</div>
         <div class="big">МЫ ЖЕНИМСЯ</div>
       </div>
+      <!-- реплики -->
       <div class="human-dialog">
         <div class="alina">- интересно, кто будет моим мужем, когда вырасту?</div>
         <div class="lyosha">- им буду я!</div>
       </div>
-      <img class="children" src="./images/children.png" alt="Дети" />
+      <!-- наши фото -->
+      <div class="children"></div>
+      <!-- бегущая строка -->
       <div class="you-are-invited">
         <div class="chunks">
           <span>вы приглашены</span>
@@ -40,6 +45,7 @@
           <span>вы приглашены</span>
         </div>
       </div>
+      <!-- уведомление с календарём -->
       <div class="appointment">
         <div class="text">
           Дорогие друзья и близкие
@@ -50,6 +56,9 @@
         </div>
         <div class="date">18 июля 2026</div>
         <div class="calendar">
+          <div class="tape-left"></div>
+          <div class="tape-right"></div>
+          <div class="reminder">сохраняйте дату</div>
           <div class="month">июль</div>
           <div class="grid">
             <div class="weekday">пн</div><div class="weekday">вт</div><div class="weekday">ср</div><div class="weekday">чт</div><div class="weekday">пт</div><div class="weekday">сб</div><div class="weekday">вс</div>
@@ -66,6 +75,19 @@
             <div>27</div><div>28</div><div>29</div><div>30</div><div>31</div><div class="disabled">01</div><div class="disabled">02</div>
           </div>
         </div>
+      </div>
+      <!-- локация -->
+      <div class="location">
+        <div class="title">Место проведения</div>
+        <img alt="Пространство Окна, Минск, ул. Октябрьская 16/20" src="./images/location.jpg" />
+        <div class="place-name">Пространство Окна</div>
+        <div class="address">
+          <a target="_blank" href="https://yandex.by/maps/-/CPSBq2M2">Минск, ул. Октябрьская 16/20</a>
+        </div>
+      </div>
+      <!-- Тайминги -->
+      <div class="timings">
+        <div class="title">Тайминги</div>
       </div>
     </div>
   </body>

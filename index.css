@@ -67,6 +67,7 @@ body {
     font-family: "Caveat", cursive;
     font-size: 50px;
     line-height: 40px;
+    text-align: center;
     color: #c2255b;
   }
 }
@@ -91,6 +92,15 @@ body {
   .lyosha {
     white-space: nowrap;
   }
+}
+
+.children {
+  background-image: url("./images/children.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  aspect-ratio: 1.4 / 1;
 }
 
 .you-are-invited {
@@ -129,7 +139,7 @@ body {
       width: 150px;
       text-align: center;
       font-size: 32px;
-      color: #FFFFFF;
+      color: #fdf9e2;
     }
   }
 }
@@ -146,6 +156,7 @@ body {
   .date {
     text-align: center;
     color: #C2255B;
+    font-family: "Caveat", cursive;
     font-size: 1.5em;
     padding: 10px;
   }
@@ -156,8 +167,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 30px 0 20px;
+    padding: 20px 0;
     margin-top: 30px;
+    position: relative;
 
     .month {
       text-align: center;
@@ -194,6 +206,88 @@ body {
         }
       }
     }
+
+    .tape-right {
+      position: absolute;
+      right: -20px;
+      top: -10px;
+      background-image: url('./images/tape.png');
+      background-size: cover;
+      background-position: center;
+      width: 70px;
+      height: 50px;
+      transform: rotate(65deg);
+    }
+
+    .tape-left {
+      position: absolute;
+      left: -20px;
+      bottom: -15px;
+      background-image: url('./images/tape.png');
+      background-size: cover;
+      background-position: center;
+      width: 70px;
+      height: 50px;
+      transform: rotate(-115deg);
+    }
+
+    .reminder {
+      position: absolute;
+      right: -10px;
+      bottom: 0px;
+      color: #C2255B;
+      font-family: "Vasek", cursive;
+      font-size: clamp(24px, 6vw, 34px);
+      transform: rotate(-20deg);
+    }
+  }
+}
+
+.location {
+  background-color: #C2255B;
+  color: #fdf9e2;
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .title {
+    font-family: "Caveat", cursive;
+    font-size: clamp(32px, 8vw, 60px);
+  }
+
+  img {
+    margin: 30px 0 20px;
+    max-width: 700px;
+    border: 20px solid #FFFFFF;
+    object-fit: cover;
+  }
+
+  .place-name {
+    font-family: "Caveat", cursive;
+    font-size: clamp(24px, 7vw, 40px);
+  }
+
+  .address {
+    font-size: clamp(16px, 4vw, 24px);
+
+    a {
+      color: #fdf9e2;
+    }
+  }
+}
+
+.timings {
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .title {
+    font-family: "Caveat", cursive;
+    font-size: clamp(32px, 8vw, 60px);
   }
 }
 
