@@ -258,6 +258,7 @@ body {
   }
 
   img {
+    content: url('./images/location.jpg');
     margin: 30px 0 20px;
     max-width: 700px;
     border: 20px solid #FFFFFF;
@@ -285,9 +286,200 @@ body {
   flex-direction: column;
   justify-content: center;
 
+  & * {
+    font-family: "Caveat", cursive;
+  }
+
+  .title {
+    font-size: clamp(32px, 8vw, 60px);
+  }
+
+  .schedule {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .schedule-item {
+      position: absolute;
+
+      &:nth-child(1) {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        left: 25%;
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+        left: 60%;
+      }
+
+
+      .time {
+        font-size: clamp(24px, 6vw, 50px);
+      }
+
+      .event {
+        font-size: clamp(16px, 4vw, 35px);
+      }
+    }
+  }
+}
+
+.dress-code {
+  background-color: #C2255B;
+  text-align: center;
+  padding: 30px 30px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   .title {
     font-family: "Caveat", cursive;
     font-size: clamp(32px, 8vw, 60px);
+    color: #fdf9e2;
+  }
+
+  .description {
+    position: relative;
+    background-color: #FFFFFF;
+    padding: 40px 20px 30px;
+    margin-top: 40px;
+
+    .tape-top {
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%) rotate(30deg);
+      background-image: url('./images/tape.png');
+      background-size: cover;
+      background-position: center;
+      width: 133px;
+      height: 100px;
+    }
+
+    .top-text {
+      font-size: clamp(16px, 5vw, 26px);
+    }
+
+    .bottom-text {
+      font-size: clamp(16px, 5vw, 26px);
+    }
+
+    .colors {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+
+      & > div {
+        min-width: clamp(35px, 12vw, 70px);
+        min-height: clamp(35px, 12vw, 70px);
+        border-radius: 50%;
+
+        &:not(:first-child) {
+          margin-left: -10px;
+        }
+      }
+    }
+  }
+}
+
+.wishes {
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+
+  .title {
+    font-family: "Caveat", cursive;
+    font-size: clamp(32px, 8vw, 60px);
+    color: #C2255B;
+  }
+
+  .description {
+    font-size: clamp(16px, 5vw, 26px);
+  }
+
+  .envelope {
+    position: relative;
+    max-width: 50%;
+    transform: rotate(1deg);
+
+    img {
+      width: 100%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -18px;
+      left: -30px;
+      background-image: url('./images/tape.png');
+      background-size: cover;
+      background-position: center;
+      width: 70px;
+      height: 50px;
+    }
+
+    .kopim-na-kvartiru {
+      position: absolute;
+      left: 50%;
+      top: 8%;
+      color: #fdf9e2;
+      font-family: "Vasek", cursive;
+      font-size: clamp(24px, 6vw, 50px);
+      font-weight: 500;
+      transform: translateX(-50%);
+      line-height: .5;
+    }
+  }
+}
+
+.countdown {
+  background-color: #C2255B;
+  text-align: center;
+  padding: 30px 30px 50px;
+  display: flex;
+  flex-direction: column;
+      align-items: center;
+
+  .title {
+    font-family: "Caveat", cursive;
+    font-size: clamp(32px, 8vw, 60px);
+    color: #fdf9e2;
+  }
+
+  .timer {
+    display: flex;
+    justify-content: space-around;
+    min-width: 50%;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fdf9e2;
+      min-width: clamp(50px, 8vw, 90px);
+      
+      .number {
+        font-family: "Vasek", cursive;
+        font-size: clamp(24px, 6vw, 50px);
+      }
+
+      .label {
+        font-family: "Vasek", cursive;
+        font-size: clamp(16px, 4vw, 24px);
+      }
+
+    }
   }
 }
 
