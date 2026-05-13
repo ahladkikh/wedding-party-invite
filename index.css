@@ -8,6 +8,11 @@
   src: url('./fonts/VasekItalic.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Caveat';
+  src: url('./fonts/Caveat.ttf') format('truetype');
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,13 +30,16 @@ body {
   background-color: #C2255B;
   color: #631b25;
   scrollbar-gutter: stable;
+  overflow-y: visible;
+  overflow-x: hidden;
 
   --max-container-width: 768px;
 }
 
 .main-wrapper {
   max-width: var(--max-container-width);
-  width: 100vw;
+  min-width: 270px;
+  width: 100%;
   background-color: #fdf9e2;
   display: flex;
   flex-direction: column;
@@ -66,7 +74,7 @@ body {
   .big {
     font-family: "Caveat", cursive;
     font-size: 50px;
-    line-height: 40px;
+    line-height: 1;
     text-align: center;
     color: #c2255b;
   }
@@ -100,7 +108,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 200px;
-  aspect-ratio: 1.4 / 1;
+  aspect-ratio: 1.65 / 1;
 }
 
 .you-are-invited {
@@ -263,6 +271,7 @@ body {
     max-width: 700px;
     border: 20px solid #FFFFFF;
     object-fit: cover;
+    aspect-ratio: 1.77 / 1;
   }
 
   .place-name {
@@ -302,9 +311,10 @@ body {
 
     .schedule-item {
       position: absolute;
+      line-height: .8;
 
       &:nth-child(1) {
-        top: 0;
+        top: 1.5%;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -316,10 +326,9 @@ body {
       }
 
       &:nth-child(3) {
-        bottom: 0;
-        left: 60%;
+        bottom: 1.5%;
+        left: 55%;
       }
-
 
       .time {
         font-size: clamp(24px, 6vw, 50px);
@@ -411,7 +420,7 @@ body {
   .envelope {
     position: relative;
     max-width: 50%;
-    transform: rotate(1deg);
+    transform: rotate(2deg);
 
     img {
       width: 100%;
@@ -457,6 +466,12 @@ body {
     color: #fdf9e2;
   }
 
+  img {
+    max-width: 73%;
+    margin: 30px;
+    border-radius: clamp(20px, 5vw, 40px);
+  }
+
   .timer {
     display: flex;
     justify-content: space-around;
@@ -476,7 +491,7 @@ body {
 
       .label {
         font-family: "Vasek", cursive;
-        font-size: clamp(16px, 4vw, 24px);
+        font-size: clamp(20px, 4vw, 32px);
       }
 
     }
